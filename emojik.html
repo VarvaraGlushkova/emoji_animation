@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+
+/* здесь будет прописана болванка эмодзи, тк бэкграунд позишн не прописан то будет отображена лишь база под эмодзи */
+    .emoji {
+      width: 155px;
+      height: 155px;
+      display: inline-block;
+      position: absolute;
+      background: url("images/EMOJI_155.png");
+      left: 45%;
+      top: 400px;
+      transform: scale(2);
+    }
+
+    .emoji-e {
+      width: 155px;
+      height: 155px;
+      display: inline-block;
+      position: absolute;
+      background: url("images/EMOJI_155.png");
+      background-position: -620px 0;
+
+    }
+
+    .emoji-m {
+      width: 155px;
+      height: 155px;
+      display: inline-block;
+      position: absolute;
+      background: url("images/EMOJI_155.png");
+      background-position: -155px 0;
+    }
+
+/* в разделы глаза и рот мы вписываем "анимацию" из кифреймс, хотя это также можно вписать в эмоджи-м/е, просто так код выглядит ЧиЩе */
+    .eyes {
+      animation: eyes 1.8s steps(1) infinite;
+    }
+
+    .mouth {
+      animation: mouth 1.5s steps(1) infinite;
+    }
+
+
+/* кифреймс всегда пишутся внизу после сиээсес */
+    @keyframes eyes {
+      0% {background-position: -620px top;}
+      20% {background-position: -775px top;}
+      40% {background-position: -930px top;}
+      60% {background-position: -1085px top;}
+      80% {background-position: -1240px top;}
+
+    }
+    @keyframes mouth {
+      0% {background-position: -155px top;}
+      33% {background-position: -310px top;}
+      66% {background-position: -465px top;}
+    }
+
+
+
+
+
+
+    </style>
+
+    <title>HW Emoji animation</title>
+
+  </head>
+  <body>
+    <div class="emoji">
+      <div class="emoji-e eyes"></div>
+      <div class="emoji-m mouth"></div>
+    </div>
+
+
+  </body>
+</html>
